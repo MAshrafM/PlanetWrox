@@ -1,5 +1,5 @@
 ﻿
-Partial Class _Default
+Partial Class Login
     Inherits BasePage
 
 End Class

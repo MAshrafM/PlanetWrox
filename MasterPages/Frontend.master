@@ -10,11 +10,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div id="PageWrapper">
+            <header><a href=""></a></header>
+            <nav>Navigation menu</nav>
+            <section id="MainContent">
+                <h1>Hi there visitor and welcome to Planet Wrox!</h1>
+                <asp:ContentPlaceHolder id="cpMainContent" runat="server">      
+                </asp:ContentPlaceHolder>
+            </section>
+            <aside id="Sidebar">
+                Select Theme: <br><asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" Height="19px" Width="120px">
+                    <asp:ListItem>Monchrome</asp:ListItem>
+                    <asp:ListItem>DarkGrey</asp:ListItem>
+                </asp:DropDownList>
+            </aside>
+            <footer>Footer</footer>
+        </div>
     </form>
 </body>
 </html>
