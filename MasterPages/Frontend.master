@@ -11,8 +11,10 @@
 <body>
     <form id="form1" runat="server">
         <div id="PageWrapper">
-            <header><a href=""></a></header>
-            <nav>Navigation menu</nav>
+            <nav>
+                <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            </nav>
             <section id="MainContent">
                 <h1>Hi there visitor and welcome to Planet Wrox!</h1>
                 <asp:ContentPlaceHolder id="cpMainContent" runat="server">      

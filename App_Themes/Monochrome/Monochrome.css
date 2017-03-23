@@ -190,3 +190,35 @@ footer
 {
   color: White;
 }
+
+ul.level1
+{
+/* Defines the appearance of main menu items. */
+font-size: 14px;
+font-weight: bold;
+height: 19px;
+line-height: 19px;
+}
+
+ul.level1 .selected
+{
+/* Defines the appearance of active menu items. */
+background-color: #509EE7;
+}
+a.level1
+{
+/* Adds some white space to the left of the main menu item text.
+!important is used to overrule the in-line CSS that the menu generates */
+padding-left: 5px !important;
+}
+a.level2
+{
+/* Defines the appearance of the sub menu items. */
+background-color: #555555;
+padding-left: 8px;
+}
+a.level1:hover, a.level2:hover
+{
+/* Defines the hover style for the main and sub items. */
+background-color: #509EE7;
+}
