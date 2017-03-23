@@ -22,6 +22,7 @@
             </nav>
             <section id="MainContent">
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
+                <h1>Hi There Visitor!</h1>
                 <asp:ContentPlaceHolder id="cpMainContent" runat="server">      
                 </asp:ContentPlaceHolder>
             </section>
