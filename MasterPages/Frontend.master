@@ -14,9 +14,14 @@
             <nav>
                 <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
                 <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="False">
+                    <LevelStyles>
+                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+                    </LevelStyles>
+                </asp:TreeView>
             </nav>
             <section id="MainContent">
-                <h1>Hi there visitor and welcome to Planet Wrox!</h1>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
                 <asp:ContentPlaceHolder id="cpMainContent" runat="server">      
                 </asp:ContentPlaceHolder>
             </section>
