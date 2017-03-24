@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="VB" CodeFile="Frontend.master.vb" Inherits="MasterPages_Frontend" %>
 
+<%@ Register src="~/Controls/Banner.ascx" tagname="Banner" tagprefix="uc1" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -31,6 +33,10 @@
                     <asp:ListItem>Monchrome</asp:ListItem>
                     <asp:ListItem>DarkGrey</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
+                <br />
+                <uc1:Banner ID="Banner1" runat="server" />
             </aside>
             <footer>Footer</footer>
         </div>

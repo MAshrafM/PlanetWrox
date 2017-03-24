@@ -222,3 +222,7 @@ a.level1:hover, a.level2:hover
 /* Defines the hover style for the main and sub items. */
 background-color: #509EE7;
 }
+
+img{
+    border: 0;
+}

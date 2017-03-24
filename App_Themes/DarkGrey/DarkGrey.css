@@ -133,3 +133,7 @@ footer
 {
   font-style: italic;
 }
+
+img{
+    border: 0;
+}
