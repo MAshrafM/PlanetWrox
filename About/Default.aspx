@@ -4,4 +4,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
+    <Ad:Banner runat="server" ID="Banner" DisplayDirection="Horizontal" />
 </asp:Content>
