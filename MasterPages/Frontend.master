@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="VB" CodeFile="Frontend.master.vb" Inherits="MasterPages_Frontend" %>
 
-<%@ Register src="~/Controls/Banner.ascx" tagname="Banner" tagprefix="uc1" %>
 
 <!DOCTYPE html>
 
@@ -36,7 +35,7 @@
                 <br />
                 <br />
                 <br />
-                <uc1:Banner ID="Banner1" runat="server" />
+                <Ad:Banner ID="Banner1" runat="server" />
             </aside>
             <footer>Footer</footer>
         </div>
