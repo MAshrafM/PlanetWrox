@@ -5,3 +5,9 @@
     </a>
 </asp:Panel>
 
+<asp:Panel ID="HorizontalPanel" runat="server">
+    <a href="~/" target="_blank" >
+        <asp:Image ID="Image2" runat="server" AlternateText="This is a sample banner" ImageUrl="~/Images/Banner486x60.gif" />
+    </a>
+</asp:Panel>
+

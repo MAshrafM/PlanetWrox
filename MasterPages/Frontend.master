@@ -12,6 +12,7 @@
 <body>
     <form id="form1" runat="server">
         <div id="PageWrapper">
+            <header><a href="/"></a></header>
             <nav>
                 <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
                 <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
@@ -28,14 +29,14 @@
                 </asp:ContentPlaceHolder>
             </section>
             <aside id="Sidebar">
-                Select Theme: <br><asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" Height="19px" Width="120px">
+                Select Theme: <br /><asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" Height="19px" Width="120px">
                     <asp:ListItem>Monchrome</asp:ListItem>
                     <asp:ListItem>DarkGrey</asp:ListItem>
                 </asp:DropDownList>
                 <br />
                 <br />
                 <br />
-                <Ad:Banner ID="Banner1" runat="server" />
+                <Ad:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
             </aside>
             <footer>Footer</footer>
         </div>

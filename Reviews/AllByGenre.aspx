@@ -1,16 +1,7 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AllByGenre.aspx.vb" Inherits="Reviews_AllByGenre" %>
+﻿<%@ Page Language="VB" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="false" CodeFile="AllByGenre.aspx.vb" Inherits="Reviews_AllByGenre" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>All Reviews By Genre</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
+</asp:Content>
