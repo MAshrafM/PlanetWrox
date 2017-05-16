@@ -226,3 +226,7 @@ background-color: #509EE7;
 img{
     border: 0;
 }
+
+.ErrorMessage{
+    color: red;
+}
