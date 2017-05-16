@@ -1,8 +1,23 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="ContactForm.ascx.vb" Inherits="Controls_ContactForm" %>
 
+<script type="text/javascript">
+    function validatePhoneNumbers(source, args) {
+        var phoneNumber = document.getElementById('<%= PhoneHome.clientID %>');
+        var phoneBusiness = document.getElementById('<%= PhoneBusiness.clientID %>');
+        if (phoneNumber.value != '' && phoneBusiness.value != '') {
+            args.IsValid = true;
+        }
+        else {
+            args.IsValid = false;
+        }
+    }
+
+
+</script>
 <asp:Table ID="Table1" runat="server">
     <asp:TableRow>
-        <asp:TableCell ColumnSpan="3"><h1>Get in touch with us</h1><p>Use the form below to get in touch with us. Enter your name, email address and your phone number to reach us.</p></asp:TableCell></asp:TableRow>
+        <asp:TableCell ColumnSpan="3"><h1>Get in touch with us</h1><p>Use the form below to get in touch with us. Enter your name, email address and your phone number to reach us.</p></asp:TableCell>
+    </asp:TableRow>
     <asp:TableRow>
         <asp:TableCell>Name</asp:TableCell>
         <asp:TableCell><asp:TextBox ID="Name" runat="server"></asp:TextBox></asp:TableCell>
@@ -28,7 +43,7 @@
     <asp:TableRow>
         <asp:TableCell>Phone home</asp:TableCell>
         <asp:TableCell><asp:TextBox ID="PhoneHome" runat="server"></asp:TextBox></asp:TableCell>
-        <asp:TableCell></asp:TableCell>
+        <asp:TableCell><asp:CustomValidator runat="server" ErrorMessage="umber" CssClass="ErrorMessage" Text="*" Display="Dynamic" ClientValidationFunction="validatePhoneNumber"></asp:CustomValidator></asp:TableCell>
     </asp:TableRow>
     <asp:TableRow>
         <asp:TableCell>Phone business</asp:TableCell>
@@ -48,5 +63,11 @@
         <asp:TableCell></asp:TableCell>
 
     </asp:TableRow>
+    <asp:TableRow>
+        <asp:TableCell ColumnSpan="3">
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" ShowMessageBox="True" ShowSummary="False" HeaderText="Please correct the following errors." />
+        </asp:TableCell>
+    </asp:TableRow>
+
 </asp:Table>
 
