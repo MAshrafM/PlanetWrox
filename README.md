@@ -11,3 +11,4 @@ This is the book main project PlanetWrox done in VB.
 - Consistent Looking Websites
 - Navigations
 - User Controls
+- Validating User Inputs
