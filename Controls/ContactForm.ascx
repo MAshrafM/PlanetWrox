@@ -14,7 +14,7 @@
 
 
 </script>
-<asp:Table ID="Table1" runat="server">
+<asp:Table ID="FormTable" runat="server">
     <asp:TableRow>
         <asp:TableCell ColumnSpan="3"><h1>Get in touch with us</h1><p>Use the form below to get in touch with us. Enter your name, email address and your phone number to reach us.</p></asp:TableCell>
     </asp:TableRow>
@@ -65,9 +65,9 @@
     </asp:TableRow>
     <asp:TableRow>
         <asp:TableCell ColumnSpan="3">
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" ShowMessageBox="True" ShowSummary="False" HeaderText="Please correct the following errors." />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" ShowMessageBox="False" ShowSummary="False" HeaderText="Please correct the following errors." />
         </asp:TableCell>
     </asp:TableRow>
 
 </asp:Table>
-
+<asp:Label ID="Message" runat="server" Text="Message Sent" Visible="false" />
