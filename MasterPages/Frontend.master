@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div id="PageWrapper">
             <header><a href="/"></a></header>
             <nav>

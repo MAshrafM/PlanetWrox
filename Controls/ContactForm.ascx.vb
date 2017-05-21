@@ -39,6 +39,7 @@ Partial Class Controls_ContactForm
 
             Message.Visible = True
             FormTable.Visible = False
+            System.Threading.Thread.Sleep(5000);
         End If
     End Sub
 End Class
