@@ -8,7 +8,7 @@ Partial Class Controls_ContactForm
 
     End Sub
 
-    Protected Sub CustomValidator1_ServerValidate(source As Object, args As ServerValidateEventArgs) Handles CustomValidator1.ServerValidate
+    Protected Sub CustomValidator1_ServerValidate(source As Object, args As ServerValidateEventArgs)
         If Not String.IsNullOrEmpty(PhoneHome.Text) OrElse Not String.IsNullOrEmpty(PhoneBusiness.Text) Then
             args.IsValid = True
         Else
@@ -18,7 +18,7 @@ Partial Class Controls_ContactForm
 
     Protected Sub SendButton_Click(sender As Object, e As EventArgs) Handles SendButton.Click
         If Page.IsValid Then
-            Dim fileName As String = Server.MapPath(~/App_Data/ContactForm.txt)
+            Dim fileName As String = Server.MapPath("~/App_Data/ContactForm.txt")
             Dim mailBody As String = File.ReadAllText(fileName)
 
             mailBody = mailBody.Replace("##Name##", Name.Text)
@@ -38,8 +38,9 @@ Partial Class Controls_ContactForm
             mySmtpClient.Send(myMessage)
 
             Message.Visible = True
+            MessageSentPara.Visible = True
             FormTable.Visible = False
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(5000)
         End If
     End Sub
 End Class

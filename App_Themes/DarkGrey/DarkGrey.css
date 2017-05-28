@@ -48,7 +48,7 @@ header
     The margin at the bottom creates some room between the header and the menu and the main content.
   */
   background-color: #E34600;
-  background-image: url(http://localhost:26262/App_Themes/DarkGrey/Images/Header.jpg)
+  background-image: url(http://localhost:26262/App_Themes/DarkGrey/Images/Header.jpg);
   margin-bottom: 20px;
 }
 
@@ -145,4 +145,13 @@ img{
   background-repeat: no-repeat;
   padding-left: 40px;
   line-height: 32px;
+}
+
+.Attention{
+    border: 4px solid red;
+    padding: 10px 0;
+    width: 100px;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
