@@ -13,3 +13,4 @@ This is the book main project PlanetWrox done in VB.
 - User Controls
 - Validating User Inputs
 - ASP.NET AJAX  
+- jQuery
