@@ -38,5 +38,6 @@
         <asp:ListItem Value="">Make a Selection</asp:ListItem>
     </asp:DropDownList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" SelectCommand="SELECT [Id], [Name] FROM [Genre] ORDER BY [SortOrder]"></asp:SqlDataSource>
+    <a href="AddEditReview.aspx">Insert New Review</a>
 </asp:Content>
 
