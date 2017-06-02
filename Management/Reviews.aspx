@@ -5,20 +5,34 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2">
         <Columns>
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-            <asp:BoundField DataField="Summary" HeaderText="Summary" SortExpression="Summary" />
-            <asp:BoundField DataField="Body" HeaderText="Body" SortExpression="Body" />
-            <asp:BoundField DataField="GenreId" HeaderText="GenreId" SortExpression="GenreId" />
-            <asp:CheckBoxField DataField="Authorized" HeaderText="Authorized" SortExpression="Authorized" />
-            <asp:BoundField DataField="CreateDateTime" HeaderText="CreateDateTime" SortExpression="CreateDateTime" />
-            <asp:BoundField DataField="UpdateDateTime" HeaderText="UpdateDateTime" SortExpression="UpdateDateTime" />
+            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReview.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
+            <asp:TemplateField HeaderText="Authorized" SortExpression="Authorized">
+                <ItemTemplate>
+                    <asp:Label ID="AuthorizedLabel" runat="server" Text='<%# GetBooleanText(Eval("Authorized"))%>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="CreateDateTime" DataFormatString="{0:g}" HeaderText="CreateDateTime" SortExpression="CreateDateTime" />
+            <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" SelectCommand="SELECT * FROM [Review] WHERE ([GenreId] = @GenreId)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" DeleteCommand="DELETE FROM [Review] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Review] ([Title], [CreateDateTime], [Authorized]) VALUES (@Title, @CreateDateTime, @Authorized)" SelectCommand="SELECT [Id], [Title], [CreateDateTime], [Authorized] FROM [Review] WHERE ([GenreId] = @GenreId)" UpdateCommand="UPDATE [Review] SET [Title] = @Title, [CreateDateTime] = @CreateDateTime, [Authorized] = @Authorized WHERE [Id] = @Id">
+        <DeleteParameters>
+            <asp:Parameter Name="Id" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="Title" Type="String" />
+            <asp:Parameter Name="CreateDateTime" Type="DateTime" />
+            <asp:Parameter Name="Authorized" Type="Boolean" />
+        </InsertParameters>
         <SelectParameters>
             <asp:ControlParameter ControlID="DropDownList1" Name="GenreId" PropertyName="SelectedValue" Type="Int32" />
         </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="Title" Type="String" />
+            <asp:Parameter Name="CreateDateTime" Type="DateTime" />
+            <asp:Parameter Name="Authorized" Type="Boolean" />
+            <asp:Parameter Name="Id" Type="Int32" />
+        </UpdateParameters>
     </asp:SqlDataSource>
     <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
         <asp:ListItem Value="">Make a Selection</asp:ListItem>
