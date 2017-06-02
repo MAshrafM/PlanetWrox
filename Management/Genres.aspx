@@ -26,6 +26,14 @@
         <asp:Parameter Name="Id" Type="Int32" />
     </UpdateParameters>
 </asp:SqlDataSource>
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="50px" Width="125px">
+        <Fields>
+            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+            <asp:BoundField DataField="SortOrder" HeaderText="SortOrder" SortExpression="SortOrder" />
+            <asp:CommandField ShowInsertButton="True" />
+        </Fields>
+    </asp:DetailsView>
 
 </asp:Content>
 
