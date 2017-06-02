@@ -15,3 +15,4 @@ This is the book main project PlanetWrox done in VB.
 - ASP.NET AJAX  
 - jQuery
 - Introduction to Databases
+- Displaying and Updating Data
