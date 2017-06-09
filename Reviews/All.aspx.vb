@@ -8,7 +8,7 @@ Partial Class Reviews_All
                                     Where review.Authorized= True
                                     Order By review.CreateDateTime Descending
                                     Select review
-            GridView1.DataSource = authorizedReviews
+            GridView1.DataSource = authorizedReviews.ToList
             GridView1.DataBind()
         End Using
     End Sub
