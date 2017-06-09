@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="false" CodeFile="NewPhotoAlbum.aspx.vb" Inherits="NewPhotoAlbum" %>
+﻿<%@ Page Title="New Photo Album" Language="VB" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="false" CodeFile="NewPhotoAlbum.aspx.vb" Inherits="NewPhotoAlbum" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
