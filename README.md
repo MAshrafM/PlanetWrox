@@ -16,3 +16,4 @@ This is the book main project PlanetWrox done in VB.
 - jQuery
 - Introduction to Databases
 - Displaying and Updating Data
+- LINQ and the ADO.NET Entity Framework
