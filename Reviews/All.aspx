@@ -4,9 +4,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server">
-</asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-    <asp:EntityDataSource ID="EntityDataSource1" runat="server">
-    </asp:EntityDataSource>
+    <asp:Repeater ID="Repeater1" runat="server" ItemType="PlanetWroxModel.Review">
+        <ItemTemplate>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "ViewDetails.aspx?ReviewId=" + Item.Id.ToString() %>' Text='<%# Item.Title %>'></asp:HyperLink>
+        </ItemTemplate>
+        <SeparatorTemplate><br /></SeparatorTemplate>
+    </asp:Repeater>
 </asp:Content>
