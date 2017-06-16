@@ -3,7 +3,7 @@
 
 This is the book main project PlanetWrox done in VB.
 
-###Chapters:
+### Chapters:
 - Getting Started
 - Building ASP.NET Website
 - Designing Web Pages
@@ -17,3 +17,4 @@ This is the book main project PlanetWrox done in VB.
 - Introduction to Databases
 - Displaying and Updating Data
 - LINQ and the ADO.NET Entity Framework
+- Working with Data-Advanced Topics
