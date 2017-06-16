@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2">
         <Columns>
-            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReview.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
+            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReviewHandCoded.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
             <asp:TemplateField HeaderText="Authorized" SortExpression="Authorized">
                 <ItemTemplate>
                     <asp:Label ID="AuthorizedLabel" runat="server" Text='<%# GetBooleanText(Eval("Authorized"))%>'></asp:Label>
@@ -38,6 +38,6 @@
         <asp:ListItem Value="">Make a Selection</asp:ListItem>
     </asp:DropDownList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" SelectCommand="SELECT [Id], [Name] FROM [Genre] ORDER BY [SortOrder]"></asp:SqlDataSource>
-    <a href="AddEditReview.aspx">Insert New Review</a>
+    <a href="AddEditReviewHandCoded.aspx">Insert New Review</a>
 </asp:Content>
 
