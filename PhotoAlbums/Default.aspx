@@ -30,6 +30,9 @@
           </div>
         </LayoutTemplate>
       </asp:ListView>
+        <br />
+        <br />
+        <asp:HyperLink ID="EditLink" runat="server" Text="Edit Photo Album" />
       <asp:EntityDataSource ID="EntityDataSource2" runat="server" AutoGenerateWhereClause="True" ConnectionString="name=PlanetWroxEntities" DefaultContainerName="PlanetWroxEntities" EnableFlattening="False" EntitySetName="Pictures" Where="">
         <WhereParameters>
           <asp:ControlParameter ControlID="DropDownList1" Name="PhotoAlbumId" PropertyName="SelectedValue" Type="Int32" />
