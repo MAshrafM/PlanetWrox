@@ -8,6 +8,11 @@
     <AnonymousTemplate>
         <asp:Login ID="Login1" runat="server" CreateUserText="Sign Up for a New Account" CreateUserUrl="SignUp.aspx">
         </asp:Login>
+        <br />
+        <br />
+        <asp:PasswordRecovery ID="PasswordRecovery1" runat="server">
+            <MailDefinition Subject="Your New Password for PlanetWrox.com"></MailDefinition>
+        </asp:PasswordRecovery>
     </AnonymousTemplate>
     <LoggedInTemplate>
         You are Already Logged In.
