@@ -17,4 +17,5 @@ This is the book main project PlanetWrox done in VB.
 - Introduction to Databases
 - Displaying and Updating Data
 - LINQ and the ADO.NET Entity Framework
-- Working with Data-Advanced Topics
+- Working with Data-Advanced Topics  
+- Security in Your ASP.NET 4.5 Website  
