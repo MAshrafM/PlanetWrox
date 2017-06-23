@@ -43,7 +43,15 @@
                 <br />
                 <Ad:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
             </aside>
-            <footer>Footer</footer>
+            <footer>
+
+                <asp:LoginName ID="LoginName1" runat="server" FormatString="Logged in as {0}" />
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        (<asp:LoginStatus ID="LoginStatus1" runat="server" />)
+                        </LoggedInTemplate>
+                    </asp:LoginView>>
+            </footer>
         </div>
     </form>
     <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
