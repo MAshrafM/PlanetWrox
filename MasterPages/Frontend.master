@@ -50,7 +50,16 @@
                     <LoggedInTemplate>
                         (<asp:LoginStatus ID="LoginStatus1" runat="server" />)
                         </LoggedInTemplate>
-                    </asp:LoginView>>
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Managers">
+                            <ContentTemplate>
+                                (<asp:HyperLink ID="HyperLink1" runat="server"
+                                NavigateUrl="~/Management/Default.aspx">Manage Site</asp:HyperLink> or
+                                <asp:LoginStatus ID="LoginStatus2" runat="server" />)
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                    </RoleGroups>
+                </asp:LoginView>>
             </footer>
         </div>
     </form>
