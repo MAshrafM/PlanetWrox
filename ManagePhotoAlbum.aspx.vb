@@ -3,6 +3,19 @@
 Partial Class ManagePhotoAlbum
     Inherits System.Web.UI.Page
 
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim photoAlbumId As Integer =
+        Convert.ToInt32(Request.QueryString.Get("PhotoAlbumId"))
+        Using myEntities As PlanetWroxEntities = New PlanetWroxEntities()
+            Dim photoAlbumOwner As String = (From p In myEntities.PhotoAlbums
+            Where p.Id = photoAlbumId
+            Select p.UserName).Single()
+            If User.Identity.Name <> photoAlbumOwner And
+            Not User.IsInRole("Managers") Then
+                Response.Redirect("~/")
+            End If
+        End Using
+    End Sub
     Protected Sub EntityDataSource1_Inserting(sender As Object, e As EntityDataSourceChangingEventArgs) Handles EntityDataSource1.Inserting
         Dim photoAlbumId As Integer = Convert.ToInt32(Request.QueryString.Get("PhotoAlbumId"))
         Dim myPicture As Picture = CType(e.Entity, Picture)
@@ -26,12 +39,5 @@ Partial Class ManagePhotoAlbum
         End If
     End Sub
 
-    Protected Sub ListView1_ItemCreated(sender As Object, e As ListViewItemEventArgs) Handles ListView1.ItemCreated
-        Select Case e.Item.ItemType
-            Case ListViewItemType.DataItem
-                Dim deleteButton As Button =
-                CType(e.Item.FindControl("DeleteButton"), Button)
-                deleteButton.Visible = Roles.IsUserInRole("Managers")
-        End Select
-    End Sub
+
 End Class
