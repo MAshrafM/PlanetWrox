@@ -1,4 +1,5 @@
-﻿
+﻿Imports PlanetWroxModel
+
 Partial Class PhotoAlbums_Default
     Inherits System.Web.UI.Page
 
@@ -7,10 +8,9 @@ Partial Class PhotoAlbums_Default
             Dim photoAlbumId As Integer = Convert.ToInt32(DropDownList1.SelectedValue)
             Using myEntities As PlanetWroxEntities = New PlanetWroxEntities()
                 Dim photoAlbumOwner As String = (From p In myEntities.PhotoAlbums
-                Where p.Id = photoAlbumId
-                Select p.UserName).Single()
-                If User.Identity.IsAuthenticated And (User.Identity.Name = photoAlbumOwner _
-                Or User.IsInRole("Managers")) Then
+                                                        Where p.Id = photoAlbumId
+                                                        Select p.Name).Single()
+                If User.Identity.IsAuthenticated And (User.Identity.Name = photoAlbumOwner Or User.IsInRole("Managers")) Then
                     EditLink.NavigateUrl = String.Format("~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", DropDownList1.SelectedValue)
                     EditLink.Visible = True
                 Else

@@ -8,7 +8,7 @@ Partial Class NewPhotoAlbum
     End Sub
     Protected Sub EntityDataSource1_Inserting(sender As Object, e As EntityDataSourceChangingEventArgs) Handles EntityDataSource1.Inserting
         Dim myPhotoAlbum As PhotoAlbum = CType(e.Entity, PhotoAlbum)
-        myPhotoAlbum.UserName = User.Identity.Name
+        myPhotoAlbum.Name = User.Identity.Name
     End Sub
     Protected Sub EntityDataSource1_Inserted(sender As Object, e As EntityDataSourceStatusEventArgs) Handles EntityDataSource1.Inserted
         If (e.Entity IsNot Nothing) Then

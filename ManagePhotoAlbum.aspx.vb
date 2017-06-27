@@ -9,7 +9,7 @@ Partial Class ManagePhotoAlbum
         Using myEntities As PlanetWroxEntities = New PlanetWroxEntities()
             Dim photoAlbumOwner As String = (From p In myEntities.PhotoAlbums
             Where p.Id = photoAlbumId
-            Select p.UserName).Single()
+            Select p.Name).Single()
             If User.Identity.Name <> photoAlbumOwner And
             Not User.IsInRole("Managers") Then
                 Response.Redirect("~/")
