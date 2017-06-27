@@ -21,3 +21,4 @@ This is the book main project PlanetWrox done in VB.
 - Security in Your ASP.NET 4.5 Website  
 - Personalizing Websites  
 - Exception, Handling, Debugging and Tracing  
+- Deploying Websites  
