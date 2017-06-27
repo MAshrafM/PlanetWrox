@@ -20,3 +20,4 @@ This is the book main project PlanetWrox done in VB.
 - Working with Data-Advanced Topics  
 - Security in Your ASP.NET 4.5 Website  
 - Personalizing Websites  
+- Exception, Handling, Debugging and Tracing  
