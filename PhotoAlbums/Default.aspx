@@ -30,6 +30,13 @@
           </div>
         </LayoutTemplate>
       </asp:ListView>
+        <asp:PlaceHolder ID="PhotoAlbumDetails" runat="server">
+            <h2>Photo Album Details</h2>
+            Created by:
+            <asp:Label ID="UserNameLabel" runat="server" Text=""></asp:Label><br />
+            About this user:
+            <asp:Label ID="BioLabel" runat="server" Text=""></asp:Label>
+        </asp:PlaceHolder>
         <br />
         <br />
         <asp:HyperLink ID="EditLink" runat="server" Text="Edit Photo Album" />

@@ -17,5 +17,15 @@ Partial Class PhotoAlbums_Default
                     EditLink.Visible = False
                 End If
 
+                If Not String.IsNullOrEmpty(photoAlbumOwner) Then
+                    Dim ownerProfile As ProfileCommon = Profile.GetProfile(photoAlbumOwner)
+                    UserNameLabel.Text = photoAlbumOwner
+                    BioLabel.Text = ownerProfile.Bio
+                    PhotoAlbumDetails.Visible = True
+                Else
+                    PhotoAlbumDetails.Visible = False
+                End If
+            End Using
+        End If
     End Sub
 End Class
