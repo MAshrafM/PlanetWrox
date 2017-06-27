@@ -19,3 +19,4 @@ This is the book main project PlanetWrox done in VB.
 - LINQ and the ADO.NET Entity Framework
 - Working with Data-Advanced Topics  
 - Security in Your ASP.NET 4.5 Website  
+- Personalizing Websites  
