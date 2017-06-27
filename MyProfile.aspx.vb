@@ -8,6 +8,14 @@ Partial Class MyProfile
             LastName.Text = Profile.LastName
             DateOfBirth.Text = Profile.DateOfBirth.ToShortDateString()
             Bio.Text = Profile.Bio
+            ' Clear the existing list
+            Profile.FavoriteGenres.Clear()
+            ' Now add the selected genres
+            For Each myItem As ListItem In PreferenceList.Items
+                If myItem.Selected Then
+                    Profile.FavoriteGenres.Add(Convert.ToInt32(myItem.Value))
+                End If
+            Next
         End If
     End Sub
 
@@ -19,4 +27,14 @@ Partial Class MyProfile
             Profile.Bio = Bio.Text
         End If
     End Sub
+
+    Protected Sub PreferenceList_DataBound(sender As Object, e As EventArgs) Handles PreferenceList.DataBound
+        For Each myItem As ListItem In PreferenceList.Items
+            Dim currentValue As Integer = Convert.ToInt32(myItem.Value)
+            If Profile.FavoriteGenres.Contains(currentValue) Then
+                myItem.Selected = True
+            End If
+        Next
+    End Sub
+
 End Class

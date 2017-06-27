@@ -31,6 +31,17 @@
 
         </asp:TableRow>
         <asp:TableRow>
+            <asp:TableCell>
+                <asp:Label ID="Label5" runat="server" AssociatedControlID="PreferenceList" Text="Favorite genres"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:CheckBoxList ID="PreferenceList" runat="server" DataSourceID="EntityDataSource1" DataTextField="Name" DataValueField="Id"></asp:CheckBoxList>
+                <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=PlanetWroxEntities" DefaultContainerName="PlanetWroxEntities" EnableFlattening="False" EntitySetName="Genres" OrderBy="it.Name" Select="it.[Id], it.[Name]"></asp:EntityDataSource>
+            </asp:TableCell>
+            <asp:TableCell></asp:TableCell>
+        </asp:TableRow>
+
+        <asp:TableRow>
             <asp:TableCell></asp:TableCell>
             <asp:TableCell><asp:Button ID="SaveButton" runat="server" Text="Save Profile" /></asp:TableCell>
 
